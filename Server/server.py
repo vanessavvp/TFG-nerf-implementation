@@ -116,7 +116,7 @@ if __name__ == "__main__":
     context = zmq.Context()
     socket = context.socket(zmq.REP)
     socket.bind("tcp://*:5555")
-    model = load_model('./tiny_nerf.h5')
+    model = load_model('./TrainedModels/tiny_nerf_lego.h5')
     
     while True:
         coordinates = socket.recv(1024)
